@@ -102,6 +102,10 @@ h1, h2, h3, p {
 
 
 .nav-link {
+  display: inline-block;
+  margin-right: 50px;
+  margin-top: 32px;
+  margin-bottom: 32px;
   color: var(--text-title-color);
   text-decoration: none;
   font-weight: 500;
@@ -109,7 +113,9 @@ h1, h2, h3, p {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-
+..nav-link:last-child {
+  margin-right: 0;
+}
 .nav-link:hover,
 .nav-link:focus {
   color: var(--accent-color);
@@ -123,6 +129,7 @@ h1, h2, h3, p {
 }
 
 .contact-link {
+  display: inline-block;
   text-decoration: none;
   font-weight: 500;
   font-size: 14px;
