@@ -6,6 +6,7 @@
   --accent-text-color: rgba(255, 255, 255, 0.6);
   --second-accent-text-color: #ffffff;
   --main-bg-color: #2f303a;
+  --second-bd-color: #188CE8;
   --accent-bg-color: #f5f4fa;
   --border-color: #ECECEC;
   --second-border-color: #EEEEEE;
@@ -13,6 +14,8 @@
 
 body {
   font-family: Roboto, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0,03em;
   background-color: var(--second-accent-text-color);
   color: var(--main-text-color);
 }
@@ -71,7 +74,7 @@ h1, h2, h3, p {
 .header-nav {
   display: flex;
   align-items: center;
-  margin-left: auto;
+
 }
 
 .logo {
@@ -87,9 +90,6 @@ h1, h2, h3, p {
 
 .logo-black {
   color: var(--text-title-color);
-}
-.logo-white {
-  color: var(--second-accent-text-color);
 }
 
 .nav-list {
@@ -167,17 +167,21 @@ h1, h2, h3, p {
 }
 
 .hero-button {
-  padding: 10px 32px 10px 32px;
+  padding: 10px 32px;
   border-radius: 4px;
+  border: none;
   cursor: pointer;
-  background-color: var(--accent-color);
   font-weight: 700;
   letter-spacing: 0.06em;
   font-size: 16px;
   line-height: 1.9;
+  background-color: var(--accent-color);
   color: var(--second-accent-text-color);
 }
-
+.hero-button:hover,
+.hero-button:focus {
+  background: var(--second-bd-color);
+}
 /*section description*/
 .qualities-section {
   padding-top: 94px;
@@ -290,6 +294,24 @@ h1, h2, h3, p {
   padding-bottom: 60px;
   background-color: var(--main-bg-color);
 }
+
+.logo-footer {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--accent-color);
+  text-decoration: none;
+}
+.logo-white {
+  color: var(--second-accent-text-color);
+}
+.address-box {
+  font-style: normal;
+}
 .footer-item {
   text-decoration: none;
 }
@@ -297,9 +319,9 @@ h1, h2, h3, p {
   margin-top: 9px;
 }
 
+
 .adress-footer {
   display: inline-block;
-  margin-top: 20px;
   font-style: normal;
   text-decoration: none;
   font-size: 14px;
@@ -344,6 +366,7 @@ h1, h2, h3, p {
 .filter-button {
   padding: 6px 22px 6px 22px;
   border-radius: 4px;
+  border: none;
   cursor: pointer;
   text-align: center;
   font-weight: 500;
@@ -367,15 +390,12 @@ h1, h2, h3, p {
 
 
 .portfolio-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
   display: flex;
   flex-wrap: wrap;
   margin-top: -30px;
   margin-left: -30px;
-  
 }
+
 .portfolio-list > .poftfolio-item {
   flex-basis: calc((100% / 3)-30px);
   margin-top: 30px;
@@ -390,12 +410,9 @@ h1, h2, h3, p {
 .blok-description {
   display: inline-block;
   width: 370px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-right: 24px;
-  padding-left: 24px;
-  background-color: var(--second-accent-text-color);
+  padding: 20px 24px;
   border: 1px solid var(--second-border-color);
+  border-top: none;
 }
 
 .portfolio-title {
@@ -411,6 +428,5 @@ h1, h2, h3, p {
   font-size: 16px;
   line-height: 1.9;
   letter-spacing: 0.03em;
-  margin-top: 4px;
   color: var(--main-text-color);
 }
